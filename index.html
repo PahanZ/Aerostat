@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aerostat</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<span>Монгольфьеркин и КО</span>
+		</div>
+		<nav id="header-nav">
+			<ul>
+				<li><a href="#">Кто мы</a></li>
+				<li><a href="#gallery">Фотографии</a></li>
+				<li><a href="#how">План полета</a></li>
+				<li><a href="#calculation">Заказать</a></li>
+				<li><a href="#instructors">Команда</a></li>
+				<li><a href="#dop-info">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="welcome-screen">
+			<h1>Организация полетов на воздушных шарах</h1>
+			<a href="#about" class="btn-welcome-screen">Подробнее</a>
+		</div>
+		<section class="about" id="about">
+			<div class="container-about">
+			<p id="like">Современный надежный шар</p>
+			<p id="sunglass">Обучение пилотированию</p>
+			<p id="camera">Фотосъемка в полете</p>
+			<p id="binokulars">Потрясающие виды</p>
+			</div>
+		</section>
+		<div class="info_video">
+			<div class="container-about">
+				<section class="in-brief">
+					<h2>Вкратце</h2>
+					<p>Более 5 лет воздухоплавательная команда Нева-Аэро выполняет полёты на воздушных шарах для гостей и жителей Петербурга над одними из самых живописных мест России — Царским Селом и Павловском, возведенных в Пушкинском районе Санкт-Петербурга.<br><br>Мы предлагаем полетать с нами!</p>
+				</section>
+				<section class="video">
+					<iframe  src="https://www.youtube.com/embed/SaPdA59R7SQ" frameborder="0" allowfullscreen></iframe>
+				</section>
+			</div>			
+		</div>
+		<div class="slider">
+			<h1>Галерея</h1>
+			<ul id="slides">
+				<li class="slide showing"><img src="./img/1.jpg" alt="slide1"></li>
+				<li class="slide"><img src="./img/2.jpg" alt="slide1"></li>
+				<li class="slide"><img src="./img/3.jpg" alt="slide1"></li>
+				<li class="slide"><img src="./img/4.jpg" alt="slide1"></li>				
+			</ul>
+		</div>
+		<div class="fly">
+			<h2>Как проходят полеты</h2>
+			<div class="fly-photo">
+				<img src="img/icon-line.png">
+				<div id="take-off">Взлет<p>1</p></div>
+				<div id="gain-height">Набираем высоту<p>2</p></div>
+				<div id="flying">Летаем<p>3</p></div>
+				<div id="reduce-height">Снижаемся<p>4</p></div>
+				<div id="sit-down">Садимся<p>5</p></div>
+			</div>
+		</div>
+		<div id="timer">
+			<div class="container-about">
+				<h1>До ближайшего полета осталось:</h1>
+				<div id="clockdiv"> 
+					<span class="days"></span><span> Дня </span> <br>
+					<span class="hours"></span><span> : </span> 
+					<span class="minutes"></span><span> : </span> 
+					<span class="seconds"></span><span> сек.</span>
+					</div>
+			</div>
+		</div>
+		<div id="calculation">
+			<div class="container-about">
+				<section id="settling">
+					<h2>Расчитать стоимость</h2>
+					<p>Итак, в назначенное время вы приехали на место полета. Команда уже готовит шар к полету — определяется напрвление ветра, запускаются горелки.<br><br>Оболочка начинает заполняться теплым воздухом, и аэростат делает первый «вздох».<br><br>Выбирайте, куда мы полетим сегодня!</p>
+				</section>
+				<section id="payment">
+					<form>
+						<ul>
+							<li>
+								<label>Маршрут полета</label>
+								<input type="text" name="route" placeholder="Выберите маршрут" id="route" list="route-list">
+									<datalist id="route-list">
+									  <option>Сестрорецк-Парнас</option>
+									  <option>Петергоф-Ленинский</option>
+									  <option>Пушкин-Купчино</option>
+		  							</datalist>
+		  					</li>
+	  						<li>
+		  						<label>Количество человек</label>
+		  						<input type="number" pattern="[0-4]{,1}" name="" placeholder="Введите количество человек">
+		  					</li>	
+	  						<li>
+		  						<label>Имя и фамилия</label>
+		  						<input type="text" id="FI" pattern="^[А-Яа-яЁё\s]+$" name="" placeholder="     Введите имя и фамилию">
+		  					</li>
+							<li>
+								<label>Телефон</label>
+		  						<input type="tel" id="telef" pattern="[0-9]{11}" name="telephone" placeholder="     Введите номер телефона">
+		  					</li>
+		  					<li>
+		  						<label>Стоимость</label>
+		  						<p>9000р</p>
+		  						<button class="btn">Полетели</button>
+		  					</li>
+  						</ul>  						
+					</form>
+				</section>
+			</div>
+		</div>
+		<div id="info">
+			<div class="container-about">
+				<section id="payment-methods">
+					<h2>Способы оплаты</h2>
+						<div class="cash">
+							<h3>Наличными</h3>
+							<p>Вы можете оплатить услугу, приехав к нам в офис. Для этого Вам необходимо предупредить об этом:<br><br>
+							– по телефону: +7 (812) 640-19-39<br>
+							– или по почте: mnebyvnebo@gmail.com<br><br>
+							Оплачивая услугу в офисе, Вы получаете все документы, подтверждающие оплату.
+							</p>
+						</div>
+						<div class="cash">
+							<h3>Курьеру</h3>
+							<p>Вы можете оплатить услугу в любом районе города и в удобное время, вызвав курьера. Для этого Вам необходимо связаться с нашими сотрудниками и сообщить об этом:<br><br>
+							– по телефону: +7 (812) 640-19-39<br>
+							– или по почте: mnebyvnebo@gmail.com<br><br>
+							Оплачивая услугу курьером, Вы получаете все документы, подтверждающие оплату.</p>
+						</div>
+				</section>
+				<section id="frequent-questions">
+					<h2>Частые вопросы</h2>
+					<div class="questions">
+						<h4>Что взять с собой в полет</h4>
+						<p>Обязательно возьмите с собой теплую одежду и немного вкусной еды, которую не нужно разогревать, а еще термос с горячим чаем. А мы обязательно дадим вам теплые пледы</p>
+					</div>
+					<div class="questions">
+						<h4>Что, если мы улетим не в ту сторону?</h4>
+						<p>Каждый шар оснащен датчиками GPS, и все его перемещения фиксируются с точностью до метра, потеряться просто не получится. А наши пилоты такой ситуации не допустят вообще
+						</p>
+					</div>
+					<div class="questions">
+						<h4>Что делать, если в полете станет плохо?</h4>
+						<p>В наших аптечках заготовлены в больших количествах разные лекарства, в том числе средства от укачивания, пакетики, а каждый пилот прошел специальную подготовку по оказанию первой помощи. В экстренной ситуации сразу же совершим посадку. Мы не дадим вам оказаться в беде</p>
+					</div>
+					<div class="questions">
+						<h4>А полет – это действительно так здорово?</h4>
+						<p>Это в тысячу раз лучше шоколода!</p>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div id="additional-information">
+			<div class="digit">
+				<p id="p1">700</p>
+				<p class="desc">Полетов в год</p>
+			</div>
+			<div class="digit">
+				<p id="p2">3000</p>
+				<p class="desc">Средняя дальность в метрах</p>
+			</div>
+			<div class="digit">
+				<p id="p3">3</p>
+				<p class="desc">Шара</p>
+			</div>
+			<div class="digit">
+				<p id="p4">12</p>
+				<p class="desc">Человек в команде</p>
+			</div>
+		</div>
+		<div id="instructors">
+			<div class="container-about">
+				<h2 id="instr-head">Команда инструкторов</h2>
+				<div class="instructor">			
+					<div class="ph">
+						<a class="ph" href="#">
+							<img class="raz" src="img/glass.jpg">
+							<img class="dva" src="img/content-team-item1.jpg" />
+						</a>
+					</div>							
+					<p class="name-instr">Мария Мариевна</p>
+					<p class="post">Старший пилот</p>
+				</div>
+				<div class="instructor">
+					<div class="ph">
+						<a class="ph" href="#">
+							<img class="raz" src="img/glass.jpg">
+							<img class="dva" src="img/content-team-item2.jpg" />
+						</a>
+					</div>		
+					<p class="name-instr">Алена Аленовна</p>
+					<p class="post">Второй пилот</p>
+				</div>
+				<div class="instructor">
+					<div class="ph">
+						<a class="ph" href="#">
+							<img class="raz" src="img/glass.jpg">
+							<img class="dva" src="img/content-team-item3.jpg" />
+						</a>
+					</div>		
+					<p class="name-instr">Надежда Надеждовна</p>
+					<p class="post">Авиадиспетчер</p>
+				</div>
+				<div class="instructor">
+					<div class="ph">
+						<a class="ph" href="#">
+							<img class="raz" src="img/glass.jpg">
+							<img class="dva" src="img/content-team-item4.jpg" />
+						</a>
+					</div>		
+					<p class="name-instr">Алина Алиновна</p>
+					<p class="post">Авиатехник</p>
+				</div>
+			</div>
+		</div>
+		<div id="rewiews">
+			<div class="container-about">
+				<h2 id="rew-head">Отзывы</h2>
+				<div class="rewiew">
+					<img src="img/content-reviews-item1.jpg">
+					<div class="block">
+						<cite>Ольга Алексеева</cite>
+						<blockquote>Оооо, это было чудесно!!! Я не знала, что воздушные шары такие огромные. Забавно, большой шар и маленькая корзинка. Полет восхитительный, выше всяких похвал. Мы побывали в самом красивом месте на Земле - в небе, оттуда открываются потрясающие виды.</blockquote>
+					</div>					
+				</div>
+				<div class="rewiew">
+					<img src="img/content-reviews-item2.jpg">
+					<div class="block">
+						<cite>Артем Рыбкин</cite>
+						<blockquote>Жене подарил полет на воздушном шаре. Сделал сюрприз на день рождения. Жена была в восторге, мне и самому понравилось, очень необычные ощущения от полета, хоть не самолет, а летит быстро, маршрут подобрали красивый. Cпасибо вам, нам все понравилось.</blockquote>
+					</div>										
+				</div>
+			</div>
+		</div>
+		<div id="dop-info">
+			<div class="container-about"><h2>Запишите адрес аэропорта</h2>
+			<h3>Всеволожск, ул. Аэродромная 60а</h3>
+			<div class="contacts">
+				<h4>Наш офис в Питере:</h4>
+				<p>Литейный 14б<br>12:00-19:00</p>
+				<p class="tel-number">746-67-33</p>
+			</div>
+			<div class="contacts">
+				<h4>Наш офис во Всеволожске:</h4>
+				<p>Аэродромная 19а<br>12:00-19:00</p>
+				<p class="tel-number">746-67-33</p>
+			</div>
+			<div id="social">
+				<a href="#" id="mail">mnebivnebo@gmail.ru</a>
+				<div id="vk"><a href="#"><img src="img/spritesheet.png"></a></div>
+				<div id="facebook"><a href="#"><img src="img/spritesheet.png"></a></div>
+				<div id="instagram"><a href="#"><img src="img/spritesheet.png"></a></div>
+			</div>
+			</div>
+		</div>
+		<footer>
+		<div class="logo">
+			<span>Монгольфьеркин и КО</span>
+		</div>
+		<nav id="header-nav">
+			<ul>
+				<li><a href="#">Кто мы</a></li>
+				<li><a href="#gallery">Фотографии</a></li>
+				<li><a href="#how">План полета</a></li>
+				<li><a href="#calculation">Заказать</a></li>
+				<li><a href="#instructors">Команда</a></li>
+				<li><a href="#dop-info">Контакты</a></li>
+			</ul>
+		</footer>
+		<a href="#about" id="scroll-top">Наверх</a>
+		</nav>
+	</main>
+	<script src="app.js"></script>
+</body>
+</html>
